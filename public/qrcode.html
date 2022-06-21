@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="qrcode.min.js"></script>
+</head>
+
+<body>
+    <div id="qrcode" style="width:200px; height:200px; margin-top:15px;border:1px solid blue"></div>
+    <script>
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            width: 300,
+            height: 300,
+            colorDark: "#00f000",
+            colorLight: "#ffff00"
+        });
+        qrcode.makeCode("Rishabn gandu hai.");
+    </script>
+</body>
+
+</html>

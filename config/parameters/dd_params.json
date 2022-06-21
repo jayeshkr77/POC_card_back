@@ -1,0 +1,14 @@
+{
+    "BANNER": true,
+    "MENU": {
+        "VIEW": 0,
+        "VIEW_MAPPING":["TILE","LIST"]
+    },
+    "QR":{
+        "bgColor":"#ffffff",
+        "fgColor":"#000000",
+        "size": 256,
+        "level": "H",
+        "value":""
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "resturantName": "Demo da dhaba",
+    "popup": [
+        {
+            "title": "Today's special",
+            "header": "",
+            "body": [
+                {
+                    "item": "Dal Fry",
+                    "price": "50"
+                }
+            ]
+        }
+    ],
+    "banner": [],
+    "messages": {
+        "CLIENT_ADDED_SUCCESSFULLY": "Client added successfully",
+        "PASSWORD_NOT_SET": "Password not set",
+        "ACTIVATE_ACCOUNT": "Activate your account",
+        "PASSWORD_UPDATED": "Password updated",
+        "PASSWORD_REQUIREMENT_UNMATCH": "Password did not matced the criteria. It should have length between 5-10 characters and can have A-Z, a-z, 0-9,!@#$%^&*()",
+        "EMAIL_INVALID": "Invalid email address",
+        "PHONE_NO_INVALID": "Invalid phoneNo, Phone number should be of 12 to 13 digits including country code.",
+        "OTP_INVALID": "Invalid otp",
+        "OTP_SET_SUCCESSFULLY": "OTP has been sent to your {email address}",
+        "INCORRECT_EMAIL_OR_PASSWORD": "Incorrect email or password",
+        "Key": ""
+    },
+    "menu": [
+        {
+            "label": "Veg Gravy",
+            "items": [
+                {
+                    "title": "Dal Fry",
+                    "price": "70"
+                },
+                {
+                    "title": "Bhurji Dal Tadka",
+                    "price": "90"
+                },
+                {
+                    "title": "Aloo Matar",
+                    "price": "80"
+                },
+                {
+                    "title": "Aloo Dum Dry",
+                    "price": "60"
+                },
+                {
+                    "title": "Aloo Chokha",
+                    "price": "50"
+                }
+            ]
+        }
+    ]
+}

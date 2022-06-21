@@ -1,0 +1,32 @@
+{
+    "name": "carte_backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.0.1",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.2",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^6.1.2",
+        "munsi": "0.0.3",
+        "nodemailer": "^6.7.5",
+        "passport": "^0.6.0",
+        "passport-jwt": "^4.0.0",
+        "passport-local": "^1.0.0",
+        "qrcode": "^1.5.0",
+        "redis": "^4.1.0",
+        "winston": "^3.7.2"
+    },
+    "devDependencies": {
+        "webpack-cli": "^4.9.2"
+    }
+}
