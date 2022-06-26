@@ -8,5 +8,6 @@
     "defaultError": {
         "message": "DEFAULT_ERROR_RESPONSE_MESSAGE",
         "statusCode": 400
-    }
+    },
+    "jsonwebtokenExpiry":"50h"
 }

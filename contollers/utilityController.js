@@ -1,3 +1,5 @@
+const jwt = require('jsonwebtoken');
+
 const logger = require('../utilities/logger');
 const Client = require("../modals/client");
 const { validateNewClient } = require('../validators/clients');
@@ -82,7 +84,7 @@ const updatePassword = async (req, res, next) => {
     }
 }
 
-const login = async (req, res, next) => {
+const loginController = async (req, res, next) => {
     try {
         if (!validateEmail(req.body.email)) {
             throw new Error('EMAIL_INVALID');
@@ -93,12 +95,28 @@ const login = async (req, res, next) => {
         const client = await Client.findOne({ email: req.body.email, password: req.body.password })
             .select({ email: 1, phoneNo: 1 })
             .exec();
-        
-        if(client){
-            console.log(client);
-        }else{
+
+        if (client) {
+            const jwtToken = jwt.sign(
+                { email: client.email, phoneNo: client.phoneNo },
+                process.env.JWT_SECRET_KEY,
+                { expiresIn: config.jsonwebtokenExpiry }
+            );
+            logger.info(`${client.email} logged in.`);
+            res.json({ status: 'success', token: jwtToken });
+        } else {
             throw new Error('INCORRECT_EMAIL_OR_PASSWORD');
         }
+    } catch (err) {
+        res.xres = JSON.stringify({ "status": "error", "message": err.message, "error": err });
+        err.status = 400;
+        next(err);
+    }
+}
+
+const dashboardController = (req,res,next) => {
+    try{
+        res.send('dashboard');
     } catch (err) {
         res.xres = JSON.stringify({ "status": "error", "message": err.message, "error": err });
         err.status = 400;
@@ -110,5 +128,6 @@ module.exports = {
     clientStatus,
     updatePassword,
     generateOTP,
-    login
+    loginController,
+    dashboardController
 }
