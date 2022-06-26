@@ -1,6 +1,12 @@
 {
-    "patterns":{
-        "email": ""
+    "patterns": {
+        "email": "",
+        "phone": "",
+        "otp": ""
     },
-    "redisExpiry": 300
+    "redisExpiry": 300,
+    "defaultError": {
+        "message": "DEFAULT_ERROR_RESPONSE_MESSAGE",
+        "statusCode": 400
+    }
 }

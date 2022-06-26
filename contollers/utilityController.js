@@ -95,7 +95,7 @@ const login = async (req, res, next) => {
             .exec();
         
         if(client){
-
+            console.log(client);
         }else{
             throw new Error('INCORRECT_EMAIL_OR_PASSWORD');
         }

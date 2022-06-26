@@ -1,4 +1,5 @@
 const logger = require('../utilities/logger');
+const backendConfig = require('../config/config.json');
 
 const loggerMiddleware = (req, res, next) => {
     res.on('finish', function () {
@@ -10,7 +11,7 @@ const loggerMiddleware = (req, res, next) => {
 const errorHandler = (err, req, res, next) => {
     logger.error(`${err.stack}`);
     err.occuredAt = new Date().toUTCString();
-    res.status(err.status || 400).json({ "status": "error", "message": err.message, "error": err });
+    res.status(err.status || backendConfig.defaultError.statusCode).json({ "status": "error", "message": err.message || backendConfig.defaultError.message, "error": err });
 }
 module.exports = { 
     loggerMiddleware, 

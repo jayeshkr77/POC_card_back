@@ -1,10 +1,10 @@
 {
-    "BANNER": true,
-    "MENU": {
-        "VIEW": 0,
-        "VIEW_MAPPING":["TILE","LIST"]
+    "banner": true,
+    "menu": {
+        "view": 0,
+        "viewMapping":["TILE","LIST"]
     },
-    "QR":{
+    "qrcode":{
         "bgColor":"#ffffff",
         "fgColor":"#000000",
         "size": 256,
